@@ -2,37 +2,156 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Website của tôi</title>
+<title>HPTA</title>
 
 <style>
+
 body{
     font-family: Arial;
-    background: #111;
-    color: white;
-    text-align: center;
+    margin:0;
+    background:#eaf6ff;
 }
 
-h1{
-    color: pink;
+header{
+    background:#5ab7ff;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:30px;
+    font-weight:bold;
 }
 
-button{
-    background: pink;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+.menu{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:40px;
 }
+
+.box{
+    background:white;
+    width:180px;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+.box:hover{
+    transform:scale(1.08);
+    background:#dff1ff;
+}
+
+.links{
+    display:none;
+    padding:20px;
+    max-width:600px;
+    margin:auto;
+}
+
+.links h2{
+    color:#2b7bbf;
+}
+
+.links a{
+    display:block;
+    margin:10px 0;
+    text-decoration:none;
+    color:#0056a6;
+    font-weight:bold;
+}
+
+.links a:hover{
+    text-decoration:underline;
+}
+
 </style>
-
 </head>
 
 <body>
 
-<h1>Chào mừng đến website của tôi</h1>
+<header>HPTA</header>
 
-<p>Đây là web đầu tiên tạo bằng VS Code</p>
+<div class="menu">
 
-<button>Bấm vào đây</button>
+<div class="box" onclick="showLinks('dia')">Địa Lí</div>
+
+<div class="box" onclick="showLinks('su')">Lịch Sử</div>
+
+<div class="box" onclick="showLinks('toan')">Toán</div>
+
+<div class="box" onclick="showLinks('van')">Ngữ Văn</div>
+
+<div class="box" onclick="showLinks('ps')">Photoshop</div>
+
+</div>
+
+
+<div id="dia" class="links">
+<h2>Tài liệu Địa Lí</h2>
+
+<a href="LINK_DRIVE_1" target="_blank">Bài học 1</a>
+<a href="LINK_DRIVE_2" target="_blank">Bài học 2</a>
+
+</div>
+
+
+<div id="su" class="links">
+<h2>Tài liệu Lịch Sử</h2>
+
+<a href="LINK_DRIVE_1" target="_blank">Bài học 1</a>
+<a href="LINK_DRIVE_2" target="_blank">Bài học 2</a>
+
+</div>
+
+
+<div id="toan" class="links">
+<h2>Tài liệu Toán</h2>
+
+<a href="LINK_DRIVE_1" target="_blank">Bài học 1</a>
+<a href="LINK_DRIVE_2" target="_blank">Bài học 2</a>
+
+</div>
+
+
+<div id="van" class="links">
+<h2>Tài liệu Ngữ Văn</h2>
+
+<a href="LINK_DRIVE_1" target="_blank">Bài học 1</a>
+<a href="LINK_DRIVE_2" target="_blank">Bài học 2</a>
+
+</div>
+
+
+<div id="ps" class="links">
+<h2>Tài liệu Photoshop</h2>
+
+<a href="LINK_DRIVE_1" target="_blank">Bài học 1</a>
+<a href="LINK_DRIVE_2" target="_blank">Bài học 2</a>
+
+</div>
+
+
+<script>
+
+function showLinks(id){
+
+let all = document.querySelectorAll(".links")
+
+all.forEach(box=>{
+box.style.display="none"
+})
+
+document.getElementById(id).style.display="block"
+
+}
+
+</script>
 
 </body>
 </html>
